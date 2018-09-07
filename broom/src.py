@@ -31,9 +31,9 @@ def glance(model):
                          'bic'        : model.bic
                          })
 
-def augment(model, new_data = 0):
+def augment(model, new_data = None):
     import pandas as pd
-    if type(new_data) == int:
+    if new_data is None:
         dt = {'.fitted' : model.fittedvalues, '.resid'  : model.resid}
     else:
             dt = {'.fitted' : model.predict(new_data)}
