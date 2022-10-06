@@ -8,7 +8,7 @@ def lm(formula, data):
     import statsmodels.api as sm
     import statsmodels.formula.api as smf
     result = smf.ols(formula, data).fit()
-    print(result.params)
+    # print(result.params)
     return result
     
 def tidy(model):
